@@ -1,0 +1,14 @@
+<div class="card-header accordion-group-header row">
+	<div class="col-10">
+		<strong>{{title}}</strong>
+	</div>
+	<div class="col-2 text-right" (click)="this.show = !this.show">
+		<span *ngIf="show"><i class="fa fa-minus" type="button"></i></span>
+		<span *ngIf="!show"><i class="fa fa-plus" type="button"></i></span>
+	</div>
+</div>
+<div [@openClose]="show ? 'open' : 'closed'" class="collapse show">
+	<div class="card-body">
+		<ng-content></ng-content>
+	</div>
+</div>

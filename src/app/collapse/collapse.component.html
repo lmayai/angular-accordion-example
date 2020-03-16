@@ -1,0 +1,66 @@
+<div class="accordion">
+  
+  <div class="card accordion-group">
+
+    <!-- Invoice import group -->
+    <app-collapse-item
+      [title]="'Invoice Import'"
+      [show]="invoiceReviewShow"
+    >
+      <div class="card-body">
+        <form [formGroup]="adminForm" (ngSubmit)="onSubmitForm()">
+          <div class="form-group">
+            <div class="row">
+              <label for="urlLocation" class="control-label k-form-field mr-4">
+                EYOS Direction Location
+              </label>
+              <input 
+                type="url" 
+                class="k-textbox mr-4"
+                formControlName="urlLocation"
+                id="urlLocation"
+                name="urlLocation"
+                placeholder="Your Documents URL">
+              <button type="button" class="eybtn k-button k-primary">Browse</button>
+            </div>
+            <div class="mt-2 d-flex justify-content-end">
+              <button type="submit" class="eybtn k-button k-primary" [disabled]="adminForm.invalid">Save</button> 
+            </div>
+          </div>
+        </form>
+      </div>
+    </app-collapse-item>
+    
+    <!-- Dashboard Settings group -->
+    <app-collapse-item
+      [title]="'Dashboard Settings'"
+      [show]="dashboardSettingsShow"
+    >
+      <div class="card-body">
+        ... Add Content Dashboard Settings here ...
+      </div>
+    </app-collapse-item>
+
+    <!-- Data Management group -->
+    <app-collapse-item
+      [title]="'Data Management'"
+      [show]="dataManagementShow"
+    >
+      <div class="card-body">
+        ... Add Content Data Management here ...
+      </div>
+    </app-collapse-item>
+    
+    <!-- Invoice Limits group -->
+    <app-collapse-item
+      [title]="'Invoice Limits'"
+      [show]="invoiceLimitsShow"
+    >
+      <div class="card-body">
+        ... Add Content Invoice limits here ...
+      </div>
+    </app-collapse-item>
+
+  </div>
+
+</div>
