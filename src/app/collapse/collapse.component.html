@@ -10,18 +10,17 @@
       <div class="card-body">
         <form [formGroup]="adminForm" (ngSubmit)="onSubmitForm()">
           <div class="form-group">
-            <div class="row">
+            <div class="d-flex justify-content-between align-items-center">
               <label for="urlLocation" class="control-label k-form-field mr-4">
-                EYOS Direction Location
+                <small>EYOS Direction Location</small>
               </label>
               <input 
                 type="url" 
-                class="k-textbox mr-4"
+                class="k-textbox form-control"
                 formControlName="urlLocation"
                 id="urlLocation"
                 name="urlLocation"
                 placeholder="Your Documents URL">
-              <button type="button" class="eybtn k-button k-primary">Browse</button>
             </div>
             <div class="mt-2 d-flex justify-content-end">
               <button type="submit" class="eybtn k-button k-primary" [disabled]="adminForm.invalid">Save</button> 
